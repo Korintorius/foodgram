@@ -24,7 +24,6 @@ class UserAdmin(BaseUserAdmin):
     """Настройка отображения и редактирования подьзователей в админке."""
 
     add_form = UserCreationForm
-    # form = BaseUserAdmin.form
 
     list_display = ('id', 'email', 'username', 'first_name',
                     'last_name', 'is_staff')

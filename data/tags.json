@@ -1,0 +1,12 @@
+[
+  {"name": "Завтрак", "slug": "zavtrak"},
+  {"name": "Обед", "slug": "obed"},
+  {"name": "Ужин", "slug": "uzhin"},
+  {"name": "Десерт", "slug": "desert"},
+  {"name": "Напитки", "slug": "napitki"},
+  {"name": "Салат", "slug": "salat"},
+  {"name": "Суп", "slug": "sup"},
+  {"name": "Гарнир", "slug": "garnir"},
+  {"name": "Выпечка", "slug": "vypechka"},
+  {"name": "Вегетарианское", "slug": "vegetarianskoe"}
+]

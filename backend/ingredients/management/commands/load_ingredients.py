@@ -7,7 +7,8 @@ from django.core.management.base import BaseCommand, CommandError
 from ingredients.constants import (
     DEFAULT_DATA_PATH,
     NAME_MAX_LENGTH,
-    UNIT_MAX_LENGTH)
+    UNIT_MAX_LENGTH
+)
 from ingredients.models import Ingredient
 
 

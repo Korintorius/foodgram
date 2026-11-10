@@ -6,10 +6,7 @@ from django.core.exceptions import ValidationError
 from django.core.management.base import BaseCommand, CommandError
 from django.core.validators import validate_slug
 
-from tags.constants import (
-    DEFAULT_DATA_PATH,
-    NAME_MAX_LENGTH,
-    SLUG_MAX_LENGTH)
+from tags.constants import DEFAULT_DATA_PATH, NAME_MAX_LENGTH, SLUG_MAX_LENGTH
 from tags.models import Tag
 
 

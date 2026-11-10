@@ -13,8 +13,8 @@ DEBUG = os.getenv('DEBUG', 'false').lower() == 'true'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-CSRF_TRUSTED_ORIGINS = ['https://foodgram.jo3.org']
-FRONTEND_URL = os.getenv('FRONTEND_URL', 'https://foodgram.jo3.org')
+CSRF_TRUSTED_ORIGINS = ['https://foodgramproject.linkpc.net']
+FRONTEND_URL = os.getenv('FRONTEND_URL', 'https://foodgramproject.linkpc.net')
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND',
                           'django.core.mail.backends.console.EmailBackend')
 DEFAULT_FROM_EMAIL = os.getenv('EMAIL_FROM', 'foodgram@project.org')

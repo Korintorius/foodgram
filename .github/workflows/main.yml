@@ -174,8 +174,8 @@ jobs:
             sudo docker compose -f docker-compose.production.yml up -d db
             sudo docker compose -f docker-compose.production.yml up -d --force-recreate backend
             sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
-            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_ingredients --path data/
-            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_tags --path data/
+            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_ingredients --path data/ingredients.json
+            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_tags --path data/tags.json
             sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic --noinput
             sudo docker compose -f docker-compose.production.yml up -d --force-recreate frontend
             sudo docker compose -f docker-compose.production.yml up -d --force-recreate gateway

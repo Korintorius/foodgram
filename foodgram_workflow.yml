@@ -144,21 +144,21 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "docker-compose.production.yml"
           target: "foodgram"
-      - name: Copy ingredients.csv via ssh
+      - name: Copy ingredients.json via ssh
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: "data/ingredients.csv"
+          source: "data/ingredients.json"
           target: "foodgram"
-      - name: Copy tags.csv via ssh
+      - name: Copy tags.json via ssh
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: "data/tags.csv"
+          source: "data/tags.json"
           target: "foodgram"    
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
@@ -174,8 +174,8 @@ jobs:
             sudo docker compose -f docker-compose.production.yml up -d db
             sudo docker compose -f docker-compose.production.yml up -d --force-recreate backend
             sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
-            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_ingredients --path data/
-            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_tags --path data/
+            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_ingredients --path data/ingredients.json
+            sudo docker compose -f docker-compose.production.yml exec -T backend python manage.py load_tags --path data/tags.json
             sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic --noinput
             sudo docker compose -f docker-compose.production.yml up -d --force-recreate frontend
             sudo docker compose -f docker-compose.production.yml up -d --force-recreate gateway

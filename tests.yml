@@ -1,4 +1,7 @@
 repo_owner: korintorius
 foodgram_domain: https://foodgramproject.linkpc.net
 dockerhub_username: korintorius
-vm_name: r-backend-vm-6512087 
+vm_name: r-backend-vm-6512087
+login: superadmin
+password: foodgram123
+EDU_PROVISIONING_ID: s5842025 

@@ -41,6 +41,5 @@ class Base64ImageField(serializers.ImageField):
         if not decoded:
             self.fail('empty_image')
 
-        return ContentFile(decoded,
-                           name=f'image.{mime.split("/")[-1].
-                                         lower() or "png"}')
+        return ContentFile(
+            decoded, name=f'image.{mime.split("/")[-1].lower() or "png"}')
